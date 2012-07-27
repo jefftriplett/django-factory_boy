@@ -95,9 +95,9 @@ def user_create(cls, **kwargs):
     return user
 UserF.set_creation_function(user_create)
 
-if DJANGO_VERSION[:2] <= (1, 3):
-    class MessageF(factory.Factory):
-        FACTORY_FOR = models.Message
-
-        user = factory.SubFactory(UserF)
-        message = factory.Sequence(lambda n: "message %s" % n)
+#if DJANGO_VERSION[:2] <= (1, 3):
+#    class MessageF(factory.Factory):
+#        FACTORY_FOR = models.Message
+#
+#        user = factory.SubFactory(UserF)
+#        message = factory.Sequence(lambda n: "message %s" % n)
